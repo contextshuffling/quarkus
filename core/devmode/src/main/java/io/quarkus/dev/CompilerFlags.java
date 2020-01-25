@@ -3,6 +3,7 @@ package io.quarkus.dev;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -27,7 +28,7 @@ public class CompilerFlags {
             String sourceJavaVersion,
             String targetJavaVersion) {
 
-        this.defaultFlags = defaultFlags == null ? new HashSet<>() : new HashSet<>(defaultFlags);
+        this.defaultFlags = defaultFlags == null ? new LinkedHashSet<>() : new LinkedHashSet<>(defaultFlags);
         this.userFlags = userFlags == null ? new ArrayList<>() : new ArrayList<>(userFlags);
         this.sourceJavaVersion = sourceJavaVersion;
         this.targetJavaVersion = targetJavaVersion;
